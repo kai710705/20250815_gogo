@@ -55,3 +55,10 @@ elif city == "台南":
 elif city == "其他":
     st.sidebar.info("您選擇的城市是: 其他")
 
+st.write("### 加總按鈕")
+st.number_input("輸入數字1",key="num1")
+st.number_input("輸入數字2",key="num2")
+if st.button("計算加總"):
+    num1 = st.session_state.num1
+    num2 = st.session_state.num2
+    st.write("加總結果是:", num1 + num2)
